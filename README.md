@@ -1,1 +1,1 @@
-# geekbrains-javacore
+# Домашние задания по курсу Java Core
