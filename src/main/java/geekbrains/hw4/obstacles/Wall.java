@@ -1,6 +1,6 @@
 package geekbrains.hw4.obstacles;
 
-public class Wall {
+public class Wall implements Obstacle{
     private int height;
 
     public Wall() {
@@ -11,11 +11,17 @@ public class Wall {
         this.height = height;
     }
 
-    public int getHeight() {
-        return height;
+    @Override
+    public int getSize() {
+        return this.height;
     }
 
-    public void setHeight(int height) {
+    @Override
+    public String toString() {
+        return "Барьер " + height + "см.";
+    }
+
+    public void setSize(int height) {
         this.height = height;
     }
 }

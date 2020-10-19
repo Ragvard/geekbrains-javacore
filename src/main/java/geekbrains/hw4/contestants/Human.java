@@ -29,7 +29,7 @@ public class Human implements Contestant {
 
     @Override
     public boolean Jump(int height) {
-        if (height < maxHeight) {
+        if (height <= maxHeight) {
             System.out.println(this.name + " успешно перепрыгнул барьер.");
             return true;
         }
@@ -39,12 +39,12 @@ public class Human implements Contestant {
 
     @Override
     public boolean Run(int length) {
-        if (length < (maxLength - fatigue)) {
+        if (length <= (maxLength - fatigue)) {
             System.out.println(this.name + " успешно пробежал дистанцию.");
             fatigue += length;
             return true;
         }
-        System.out.println(this.name + " не смог пробежаать дистанцию.");
+        System.out.println(this.name + " не смог пробежать дистанцию.");
         fatigue = maxLength;
         return false;
     }

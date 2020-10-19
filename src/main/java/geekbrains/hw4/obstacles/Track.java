@@ -11,11 +11,17 @@ public class Track implements Obstacle {
         this.length = length;
     }
 
-    public int getLength() {
-        return length;
+    @Override
+    public int getSize() {
+        return this.length;
     }
 
-    public void setLength(int length) {
+    @Override
+    public String toString() {
+        return "Дорожка " + this.length + "м.";
+    }
+
+    public void setSize(int length) {
         this.length = length;
     }
 }

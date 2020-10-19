@@ -25,7 +25,7 @@ public class Robot implements Contestant {
 
     @Override
     public boolean Jump(int height) {
-        if (height < maxHeight) {
+        if (height <= maxHeight) {
             System.out.println(this.name + " успешно перепрыгнул барьер.");
             return true;
         }
@@ -35,11 +35,11 @@ public class Robot implements Contestant {
 
     @Override
     public boolean Run(int length) {
-        if (length < maxLength) {
+        if (length <= maxLength) {
             System.out.println(this.name + " успешно пробежал дистанцию.");
             return true;
         }
-        System.out.println(this.name + " не смог пробежаать дистанцию.");
+        System.out.println(this.name + " не смог пробежать дистанцию.");
         return false;
     }
 
