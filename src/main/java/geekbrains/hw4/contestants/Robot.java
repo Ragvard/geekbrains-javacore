@@ -4,6 +4,7 @@ public class Robot implements Contestant {
     private int maxHeight;
     private int maxLength;
     private String name;
+    private int fatigue;
 
     public Robot() {
         this.maxHeight = 30;
@@ -35,11 +36,13 @@ public class Robot implements Contestant {
 
     @Override
     public boolean Run(int length) {
-        if (length <= maxLength) {
+        if (length <= (maxLength - fatigue)) {
             System.out.println(this.name + " успешно пробежал дистанцию.");
+            fatigue += length;
             return true;
         }
         System.out.println(this.name + " не смог пробежать дистанцию.");
+        fatigue = maxLength;
         return false;
     }
 
@@ -65,6 +68,14 @@ public class Robot implements Contestant {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getFatigue() {
+        return fatigue;
+    }
+
+    public void setFatigue(int fatigue) {
+        this.fatigue = fatigue;
     }
 }
 
