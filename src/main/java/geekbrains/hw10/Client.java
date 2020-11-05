@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Client {
     public static void main(String[] args) {
         try (Socket socket = new Socket("localhost", 8080)) {
-            System.out.println("Клиент запущен и подключен.\nДля прекращения работы введите пустую строку. Введите сообщение:\n");
+            System.out.println("Клиент запущен и подключен.\nДля прекращения работы введите пустую строку. Введите сообщение:");
 
             DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
 

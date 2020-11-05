@@ -16,7 +16,7 @@ public class Server {
                 while (true) {
                     String str = inputStream.readUTF();
                     if (str.isEmpty()) break;
-                    System.out.println(str);
+                    System.out.println("Клиент: " + str);
                 }
             }
 
