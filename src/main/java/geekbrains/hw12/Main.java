@@ -2,6 +2,7 @@ package geekbrains.hw12;
 
 import java.io.*;
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.*;
 
 public class Main {
@@ -32,11 +33,11 @@ public class Main {
                 .toLowerCase();
     }
 
-    public static int countSameWords(String[][] arr) {
-        return (int) Arrays.stream(arr)
+    public static List<String> getUniqueWords(String[][] arr) {
+        return Arrays.stream(arr)
                 .flatMap(Arrays::stream)
                 .distinct()
-                .count();
+                .collect(Collectors.toList());
     }
 
     public static int sumEven(int a, int b) {
@@ -76,7 +77,8 @@ public class Main {
                 {"k", "l", "m", "n", "o"},
                 {"a", "b", "c", "d", "e"},
                 {"f", "g", "h", "i", "j"}};
-        System.out.println(countSameWords(arr));
+
+        System.out.println(getUniqueWords(arr));
 
         System.out.println("--------------------------------------------------------------");
 
