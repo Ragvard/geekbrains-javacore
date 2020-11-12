@@ -50,10 +50,10 @@ public class Main {
                 .reduce(0, Integer::sum);
     }
 
-    public static String getFirstWords(String[] arr) {
+    public static String getFirstWords(String[] arr, int lim) {
         return Arrays.stream(arr)
                 .sorted()
-                .limit(3)
+                .limit(lim)
                 .collect(Collectors.joining(" "));
     }
 
@@ -96,7 +96,7 @@ public class Main {
 
         // Из массива слов получить первые три слова в алфавитном порядке;
 
-        System.out.println(getFirstWords(arr2));
+        System.out.println(getFirstWords(arr2, 3));
 
     }
 }
